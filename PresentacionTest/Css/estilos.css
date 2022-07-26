@@ -1,0 +1,165 @@
+﻿body {
+    background: #9e9e9e5e;
+}
+
+/*Estilos para estructura de las cajas*/
+#contenedor-cajas {
+    margin-top: 2rem;
+    width: auto;
+}
+#contenedor-cajas .caja {
+    /*
+    float: left;
+    margin: 1px;
+    width: 388px;
+    height: 240px;*/
+    box-sizing: border-box;
+    min-width: 377px !important;
+    min-height: 242px !important;
+    max-width:  758px !important;
+    max-height: 488px !important;
+    padding: 1rem 0rem 1rem 1rem;
+    font-size: 4em;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 3px;
+    background: #ffffffc7;
+    overflow: hidden;
+}
+#contenedor-cajas .caja .centradorCaja {
+    height: 100%;
+    overflow: auto;
+    position: relative;
+}
+    #contenedor-cajas .caja .centradorCaja::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 10px;
+        height: 10px;
+    }
+
+    #contenedor-cajas .caja .centradorCaja::-webkit-scrollbar-thumb {
+        background-color: #9e9e9e42;
+        border-radius: 2px;
+        border: 2px solid #f1f2f3;
+    }
+
+#contenedor-cajas .caja .centradorCaja .cajaSup {
+    height: 39px;
+    width: 98%;
+}
+    #contenedor-cajas .caja .centradorCaja .cajaSup .tituloCaja {
+        font-size: 19px;
+        color: #3f51b5d9;
+        font-weight: 700;
+        font-family: helvetica;
+        border-bottom: 1px solid grey;
+        width: 50%;
+        margin: auto;
+        float: left;
+    }
+    #contenedor-cajas .caja .centradorCaja .cajaSup input {
+        font-size: 18px;
+        border-radius: 4px;
+        border: 1px solid #466947;
+        background: #4caf50;
+        color: #f9f9f9;
+        position: relative;
+        float: right;
+    }
+        #contenedor-cajas .caja .centradorCaja .cajaSup input:hover {
+            border: 1px solid #e4e4e4
+        }
+        #contenedor-cajas .caja .centradorCaja .cajaSup input:active {
+            font-size: 17px;
+        }
+        #contenedor-cajas .caja .centradorCaja .cajaSup input.disabled {
+            background: grey;
+            opacity: 0.5;
+            cursor: no-drop;
+        }
+            #contenedor-cajas .caja .centradorCaja .cajaSup input.disabled:hover {
+                border: 1px solid #466947;
+            }
+            #contenedor-cajas .caja .centradorCaja .cajaSup input.disabled:active {
+                font-size: 18px;
+            }
+
+            #contenedor-cajas .caja .centradorCaja .contenidoCaja {
+                height: auto;
+            }
+
+/*Adaptacion de las imagenes al los tamaños de la caja*/
+#contenedor-cajas .caja .centradorCaja .contenidoCaja #contImg{
+    padding: 1rem;
+}
+#contenedor-cajas .caja .centradorCaja .contenidoCaja #contImg img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid #9e9e9e;
+    display: none;
+}
+@supports(object-fit: cover) {
+    #contenedor-cajas .caja .centradorCaja .contenidoCaja #contImg img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+#contenedor-cajas .caja .centradorCaja .contenidoCaja #contCaja6 p,
+#contenedor-cajas .caja .centradorCaja .contenidoCaja #contCaja2 p {
+    font-size: 31px;
+    color: grey;
+}
+#contenedor-cajas .caja .centradorCaja .contenidoCaja #contCaja6 span,
+#contenedor-cajas .caja .centradorCaja .contenidoCaja #contCaja2 span {
+    border: 2px solid grey;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    font-size: 46px;
+    width: 222px;
+    color: #3f51b5;
+    padding: 7px;
+}
+
+/*Tamaños por defecto de las cajas*/
+.grande {
+    width: 758px;
+    height: 488px;
+}
+.chico {
+    width: 377px;
+    height: 242px;
+}
+.alto {
+    width: 377px;
+    height: 488px;
+}
+.ancho {
+    width: 758px;
+    height: 242px;
+}
+
+/*Efecto delineado mover/redimensionar elementos*/
+.packery-drop-placeholder {
+    outline: 3px dashed #444;
+    outline-offset: -6px;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+}
+
+/*Adaptaciones responsive de los elementos*/
+@media(max-width: 900px){
+    .body-content {
+        zoom: 78%;
+        transition: all 0.5s;
+    }
+ }
+@media(max-width: 650px) {
+    .body-content {
+        zoom: 50%;
+        transition: all 0.5s;
+    }
+}
